@@ -14,7 +14,7 @@ contract StudentRegister {
         bool isRegistered;
     }
 
-    mapping(address => Student) public student;
+    mapping(address => Student) public students;
 
     // custom errorf
     error Unauthorized(string message);
@@ -32,15 +32,15 @@ contract StudentRegister {
     // Only owner can register student
     function registerStudent(address studentId, string memory name, uint256 percentage, uint256 totalMarks) public onlyOwner {
         // require(student[studentId].isRegistered == false, "student already registered");
-        if(student[studentId].isRegistered != false){
+        if(students[studentId].isRegistered != false){
             revert Unauthorized("student already registered");
         }
-        student[studentId] = Student(studentId, name, percentage, totalMarks, true);
+        students[studentId] = Student(studentId, name, percentage, totalMarks, true);
     }
 
     // Get student details
     function getStudentDetails(address studentId) public view returns (address, string memory, uint256, uint256){
-       return (student[studentId].studentId, student[studentId].name, student[studentId].percentage, student[studentId].totalMarks);      
+       return (students[studentId].studentId, students[studentId].name, students[studentId].percentage, students[studentId].totalMarks);      
            
     }
   }
