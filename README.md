@@ -3,7 +3,7 @@ You must complete the tasks from the previous topics before you begin this assig
 Perform the task and share the link to your github in the field below.
 
 # Instructions
-To ensure that our smart contract can receive ETH sent to it via transfers, we will create a fallback or receive payable function. The task is to create the fallback function and make sure when a user transfers ETH to the smart contract, the transaction does not get reverted
+A simple use case for inheritance is to launch an ERC20 token using the OpenZepellin ERC20 implementation. Try to launch your custom ERC20 on any test network and then send me the address to the contract!
 
 # How to run
 

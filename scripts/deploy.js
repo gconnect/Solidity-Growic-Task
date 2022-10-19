@@ -8,13 +8,13 @@ const hre = require("hardhat");
 
 async function main() {
 
-  const FallbackTask = await hre.ethers.getContractFactory("FallbackTask");
-  const fallbackTask = await FallbackTask.deploy();
+  const InheritanceTask = await hre.ethers.getContractFactory("InheritanceTask");
+  const inheritanceTask = await InheritanceTask.deploy();
 
-  await fallbackTask.deployed();
+  await inheritanceTask.deployed();
 
   console.log(
-    `FallbackTask deployed to ${fallbackTask.address}`
+    `InheritanceTask deployed to ${inheritanceTask.address}`
   );
 }
 
