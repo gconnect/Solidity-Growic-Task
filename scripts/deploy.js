@@ -8,13 +8,13 @@ const hre = require("hardhat");
 
 async function main() {
 
-  const StructTask = await hre.ethers.getContractFactory("StructTask");
-  const structTask = await StructTask.deploy();
+  const ModifierTask = await hre.ethers.getContractFactory("ModifierTask");
+  const modifierTask = await ModifierTask.deploy();
 
-  await structTask.deployed();
+  await modifierTask.deployed();
 
   console.log(
-    `StructTask deployed to ${structTask.address}`
+    `ModifierTask deployed to ${modifierTask.address}`
   );
 }
 
